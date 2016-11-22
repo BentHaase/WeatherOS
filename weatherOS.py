@@ -19,6 +19,7 @@ timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
 
 # get system uptime
 uptime = subprocess.Popen(["uptime", "--pretty"], stdout=subprocess.PIPE).communicate()[0]
+# cut relevant data
 uptime = uptime[3:-1]
 
 # preparing GPIO of Raspberry pi
